@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        #weather-info {
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button i {
+            margin-right: 8px;
+        }
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .input-group {
+            display: flex;
+            margin-top: 15px;
+            align-items: center;
+        }
+        .input-group i {
+            margin-right: 10px;
+            color: #7f8c8d;
+        }
+        #weather-info h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        #weather-info h2 i {
+            margin-right: 10px;
+            color: #f39c12;
+        }
+        #weather-info p {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        #weather-info p i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+            color: #3498db;
+        }
+        .weather-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #f39c12;
+        }
+        .app-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .location-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .location-options button {
+            flex: 1;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+        <div class="location-options">
+            <button id="get-location"><i class="fas fa-map-marker-alt"></i> My Location</button>
+            <button id="search-location"><i class="fas fa-search"></i> Search Location</button>
+        </div>
+        <div class="input-group" style="display: none;">
+            <i class="fas fa-city"></i>
+            <input type="text" id="location-input" placeholder="Enter city, country">
+        </div>
+        <div id="weather-info"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

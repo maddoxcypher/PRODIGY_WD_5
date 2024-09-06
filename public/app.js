@@ -155,4 +155,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ... (keep the rest of the existing code) ...
